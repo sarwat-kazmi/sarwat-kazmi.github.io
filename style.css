@@ -15,9 +15,21 @@ body {
     margin: 0 auto;
 }
 
-  /* header img */
+/* header */
+
+.header {
+    color: rgb(238, 151, 113);
+    background-color: rgb(58, 88, 187);
+}
+
+/* images */
   
-img {
+.intro img {
     max-width: 200px;
     height: 200px;
+}
+
+.header img {
+    max-width: 100px;
+    height: 100px;
 }
