@@ -1,0 +1,23 @@
+/* main stuff */
+html, body {
+    margin: 0;
+    padding: 0;
+  }
+  
+html {
+    font-size: 20px;
+    background-color: rgb(157, 206, 207);
+}
+  
+body {
+    width: 70%;
+    min-width: 800px;
+    margin: 0 auto;
+}
+
+  /* header img */
+  
+img {
+    max-width: 200px;
+    height: 200px;
+}
