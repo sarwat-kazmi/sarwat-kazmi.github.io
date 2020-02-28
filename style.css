@@ -1,35 +1,128 @@
-/* main stuff */
-html, body {
-    margin: 0;
-    padding: 0;
-  }
-  
 html {
     font-size: 20px;
-    background-color: rgb(157, 206, 207);
+    background-color: rgb(194, 209, 241);
 }
-  
-body {
-    width: 70%;
-    min-width: 800px;
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 960px;
+    max-width: 100%;
     margin: 0 auto;
+    padding: 20px;
+}
+
+.body-content {
+    max-width: 100%;
+    border-radius: 30px;
+    background-color: rgba(122, 112, 216, 0.733);
+    padding-top: 10px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 50px;
 }
 
 /* header */
 
 .header {
+    display: flex;
+    max-width: 100%;
     color: rgb(238, 151, 113);
-    background-color: rgb(58, 88, 187);
+    background-color: #1F3B7D;
+    border-radius: 30px;
+    padding: 20px;
 }
 
-/* images */
-  
-.intro img {
-    max-width: 200px;
-    height: 200px;
+.header h1 {
+    font-family: 'Rubik', sans-serif;
+    color: orange;
+    text-shadow: 2px 2px rgb(233, 17, 222);
 }
 
 .header img {
     max-width: 100px;
     height: 100px;
 }
+
+/* introduction */
+
+.sarwatpic {
+    max-width: 200px;
+    height: 200px;
+    margin: auto;
+    border-radius: 100px;
+    border-style: dotted;
+    color: orange;
+    justify-content: center;
+    display: flex;
+}
+
+.intro {
+    justify-content: center;
+}
+
+.intro h2 {
+    text-align: center;
+    font-family: 'Rubik', sans-serif;
+    color: orange;
+    text-shadow: 2px 2px rgb(233, 17, 222);
+}
+
+.intro p {
+    text-align: center;
+    font-family: 'Quicksand', sans-serif;
+    color: whitesmoke;
+}
+
+/* experience class */
+
+.experience {
+    background: #6094FD;
+    padding: 50px;
+    border-radius: 30px;
+}
+
+.experience h3 {
+    text-align: center;
+    border-bottom-style: dotted;
+    font-family: 'Rubik', sans-serif;
+    color: orange;
+    text-shadow: 2px 2px rgb(233, 17, 222);
+}
+
+.experience h5 {
+    font-family: 'Rubik', sans-serif;
+    color: rgba(233, 17, 222, 0.651);
+    text-shadow: 2px 2px orange;
+}
+
+.experience p, ul {
+    text-align: left;
+    font-family: 'Quicksand', sans-serif;
+    color: whitesmoke;
+}
+
+.experience h4 {
+    font-family: 'Rubik', sans-serif;
+    color: rgba(233, 17, 222, 0.651);
+    text-shadow: 2px 2px orange;
+}
+
+/* media screen */
+
+@media only screen and (max-width: 1000px) {
+    .container {
+        justify-content: center;
+        align-items: center;
+    }
+    .sarwatpic {
+        display: flex;
+        margin-bottom: 10px;
+    }
+    .intro p {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+  }
