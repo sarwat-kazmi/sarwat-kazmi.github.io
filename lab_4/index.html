@@ -10,7 +10,7 @@
     <div class="container">
       <div class="wrapper">
         <div class="header">Sarwat Kazmi Lab 4</div>
-        <button class="button" onclick="clickMe(); getLetter();">
+        <button class="button" onclick="toDo()">
           Click me to make a change
         </button>
         <div class="content">
@@ -24,6 +24,10 @@
       </div>
     </div>
     <script>
+      function toDo() {
+        clickMe(); getLetter();
+      }
+
       function clickMe() {
         const content = document.querySelector(".content");
         content.innerHTML = "Hello world";
