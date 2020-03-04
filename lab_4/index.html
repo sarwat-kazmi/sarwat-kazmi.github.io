@@ -2,43 +2,62 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Sarwat Kazmi lab 4</title>
+    <title>Sarwat Kazmi's Lab 4</title>
     <link rel="stylesheet" type="text/css" href="style.css"/>
   </head>
 
   <body>
     <div class="container">
       <div class="wrapper">
-        <div class="header">Sarwat Kazmi Lab 4</div>
-        <button class="button" onclick="toDo()">
+        <div class="header">Prof A's Demo Page</div>
+        <button class="button" onclick="clickMe()">
           Click me to make a change
         </button>
         <div class="content">
           <p>
             In the mid '90s, Tobias formed a folk music band with Lindsay and Maebe which he called Dr. Funke's 100 Percent Natural Good Time Family Band Solution. The group was underwritten by the Natural Food Life Company, a division of Chem-Grow, an Allen Crayne acqusition, which was part of the Squimm Group. Their motto was simple: We keep you alive. I don't care if it takes from now till the end of Shrimpfest. Oh by the way, Doctor said no kissing her on the face for one week. I was like make it two weeks, see if I care! Make love in your *own* hand, Mother! 
           </p>
-          <p class="name">My name has 11 characters</p><br>
-          <p class="upper-letter">The third letter in my name is</p>
         </div>
         <div class="footer"></div>
       </div>
     </div>
+    
     <script>
-      function toDo() {
-        clickMe(); getLetter();
-      }
-
       function clickMe() {
         const content = document.querySelector(".content");
         content.innerHTML = "Hello world";
+
+        // changing header title
+        const newHeader = document.querySelector('.header');
+        let firstname = 'Sarwat';
+        newHeader.textContent = firstname + "'s Lab 4"
+
+        // adding paragraphs
+        content.innerHTML += "<p class =\"p1\"></p><p class =\"p2\"></p>";
+
+        // returning number of characters in name
+        const p1 = document.getElementsByClassName('p1');
+        p1[0].innerHTML += 'My name has ' + firstname.length + ' characters.';
+
+        // returning 3rd chracter in first name
+        const p2 = document.getElementsByClassName('p2');
+        p2[0].innerHTML += 'The third character in my name is ' + firstname[2].toUpperCase();
+
+        // surname
+        let surname = 'Kazmi';
+        p2[0].innerHTML += '<br>' + surname.slice(surname.length-3) + '<br>';
+
+        // substring first and surname
+        const name = 'Sarwat Kazmi';
+        const first_name = name.slice(0,6);
+        const last_name = name.slice(7,name.length);
+
+        let total = first_name.length + last_name.length;
+
+        // adding up total characters and adding to header
+        newHeader.textContent += ' ' + total;
       }
-      function getLetter() {
-        const letter = "Sarwat";
-        const letterChar = letter.charAt(2);
-        document.getElementsByClassName("name").innerHTML = letterChar;
-      }
+
     </script>
-    <!-- const letter = document.querySelector(".name"); -->
-        <!-- letter.charAt(2) = "Sarwat"; -->
   </body>
 </html>
