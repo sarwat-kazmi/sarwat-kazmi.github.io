@@ -2,25 +2,23 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Prof A's Demo Page</title>
-    <link rel="stylesheet" type="text/css" href="./style.css" />
+    <title>Sarwat Kazmi lab 4</title>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
   </head>
 
   <body>
     <div class="container">
       <div class="wrapper">
-        <div class="header">Prof A's Demo Page</div>
-        <button class="button" onclick="clickMe()">
+        <div class="header">Sarwat Kazmi Lab 4</div>
+        <button class="button" onclick="clickMe(); getLetter();">
           Click me to make a change
         </button>
         <div class="content">
           <p>
-            Retro fam narwhal hoodie meggings viral bushwick yr chartreuse.
-            Chartreuse seitan banh mi selfies, woke ennui venmo craft beer. Air
-            plant tumeric retro DIY iPhone poutine. +1 gastropub chillwave,
-            cronut glossier pork belly tacos poke next level fanny pack vegan
-            jianbing lo-fi.
+            In the mid '90s, Tobias formed a folk music band with Lindsay and Maebe which he called Dr. Funke's 100 Percent Natural Good Time Family Band Solution. The group was underwritten by the Natural Food Life Company, a division of Chem-Grow, an Allen Crayne acqusition, which was part of the Squimm Group. Their motto was simple: We keep you alive. I don't care if it takes from now till the end of Shrimpfest. Oh by the way, Doctor said no kissing her on the face for one week. I was like make it two weeks, see if I care! Make love in your *own* hand, Mother! 
           </p>
+          <p class="name">My name has 11 characters</p><br>
+          <p class="upper-letter">The third letter in my name is</p>
         </div>
         <div class="footer"></div>
       </div>
@@ -30,6 +28,13 @@
         const content = document.querySelector(".content");
         content.innerHTML = "Hello world";
       }
+      function getLetter() {
+        const letter = "Sarwat";
+        const letterChar = letter.charAt(2);
+        document.getElementsByClassName("name").innerHTML = letterChar;
+      }
     </script>
+    <!-- const letter = document.querySelector(".name"); -->
+        <!-- letter.charAt(2) = "Sarwat"; -->
   </body>
 </html>
