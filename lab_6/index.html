@@ -2,24 +2,33 @@
 <html lang="en">
   <head>
     <title>Forms Lab</title>
+    <link rel="stylesheet" type="text/css" href="form_styles.css"/>
   </head>
   <body>
     <div class="wrapper">
       <div class="container">
-        <div>
+        <div class="header">
           <h1>HTML 1 Forms Lab</h1>
         </div>
         <div>
           <!-- question 5 -->
           <form action="https://nameless-thicket-21836.herokuapp.com/lab" method="post">
-            <!-- question 2 -->
-            <label for="name">Name:</label>
-            <input type="text" id="name">
-            <!-- question 3 -->
-            <label for="interests">Interests:</label>
-            <textarea name="interests" id="interests" cols="33" rows="5">by default this element is filled with text.</textarea><br />
-            <!-- question 4 -->
-            <button class="button" type="submit">Submit</button>
+            <ul>
+              <li>
+                <!-- question 2 -->
+                <label for="name">Name:</label>
+                <input type="text" id="name">
+              </li>
+              <li>
+                <!-- question 3 -->
+                <label for="interests">Interests:</label>
+                <textarea name="interests" id="interests" cols="33" rows="5">by default this element is filled with text.</textarea><br />
+              </li>
+              <li class="button">
+                <!-- question 4 -->
+              <button type="submit">Submit</button>
+              </li>
+            </ul>
           </form>
         </div>
       </div>
