@@ -13,6 +13,8 @@
       src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
       integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
       crossorigin=""
+      type="text/javascript"
+      src="data.json"
     ></script>
   </head>
 
@@ -21,13 +23,34 @@
       <div class="wrapper">
         <div class="header">Frontend Libraries: Maps Lab</div>
         <div class="content">
-          When your lab is done, this should be replaced with a stylish map.
+          <div id="map1"></div>
         </div>
         <div class="footer">Make some markers work!</div>
       </div>
     </div>
     <script>
         /* Your lab code can go here, or in an external file you include */
+        // changing header title
+          const newHeader = document.querySelector('.header');
+          newHeader.textContent = "Sarwat Kazmi Frontend Libraries: Maps Lab"
+
+        // create map
+        const themap = L.map('map1').setView([38.9881, -76.9416], 13);
+
+        // get access token to get tiles for map
+        L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
+            attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+            maxZoom: 18,
+            id: 'mapbox/streets-v11',
+            tileSize: 512,
+            zoomOffset: -1,
+            accessToken: 'pk.eyJ1Ijoic2Fyd2F0a2F6bWkiLCJhIjoiY2s4bnMwcW53MDkyNjNlbzRqNjBidXN2MiJ9.KSYTVBd6ICDLN9XHA3O_Ag'
+          }).addTo(themap);
+
+          // marker 1 - hornbake library
+          const mark1 = L.marker([38.9881, -76.9416]).addTo(themap);
+
+          // marker 2 -
     </script>
   </body>
 </html>
