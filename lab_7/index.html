@@ -50,8 +50,23 @@
 
           // marker 1 - hornbake library
           const mark1 = L.marker([38.9881, -76.9416]).addTo(themap);
+          const str1 = "<b>Hornbake Library</b>";
+          mark1.bindPopup(str1).openPopup();
 
-          // marker 2 -
+          // marker 2 - ledo's restaurant
+          const mark2 = L.marker([food[103]["geocoded_column_1"]["coordinates"][1], food[103]["geocoded_column_1"]["coordinates"][0]]).addTo(themap);
+          const str2 = "<b>Ledo's Restaurant</b>";
+          mark2.bindPopup(str2).openPopup();
+
+          // marker 3 - seven eleven 36471A
+          const mark3 = L.marker([food[128]["geocoded_column_1"]["coordinates"][1], food[128]["geocoded_column_1"]["coordinates"][0]]).addTo(themap);
+          const str3 = "<b>Seven Eleven 36471A</b>";
+          mark3.bindPopup(str3).openPopup();
+
+          // marker 4
+          const mark4 = L.marker([food[145]["geocoded_column_1"]["coordinates"][1], food[145]["geocoded_column_1"]["coordinates"][0]]).addTo(themap);
+          const str4 = "<b>Bowlero College Park</b>";
+          mark4.bindPopup(str4).openPopup();
     </script>
   </body>
 </html>

@@ -106,3 +106,10 @@ h3 {
   width: 640px;
   height: 480px;
 }
+
+/* leaflet style popup */
+.leaflet-popup-content-wrapper, .leaflet-popup-tip {
+  background: rgb(206, 152, 152);
+  color: rgb(38, 94, 12);
+  box-shadow: 0 3px 14px rgba(107, 26, 26, 0.616);
+}
