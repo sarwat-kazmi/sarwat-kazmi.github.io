@@ -19,7 +19,30 @@
       .then(res => res.json())
       .then(res => {
         // Here's where your chart code should go.
-      })
+        const chart = new CanvasJS.Chart('barContainer', {
+          animationEnabled: true,
+    
+          title:{
+            text:"Let's Find Somewhere to Eat!"
+          },
+          axisX:{
+            interval: 1
+          },
+          axisY2:{
+            interlacedColor: 'rgb(156, 148, 209)',
+            gridColor: 'rgb(156, 148, 209)',
+            title: 'Quantity of Food Places'
+          },
+          data: [{
+            type: 'bar',
+            name: 'food categories',
+            axisYType: 'secondary',
+            color: '#0e0165',
+            dataPoints: results
+          }]
+        });
+        chart.render();
+      });
   </script>
 </body>
 
