@@ -52,8 +52,45 @@
           });
       }
 
+      // GET request
+      function getForm(e) {
+        e.preventDefault(); // this prevents your page reloading on button click
+        const target = document.querySelector("#labForm");
+        const btn = document.querySelector("#formBtn");
+
+        const formToSend = new FormData(target);
+
+        fetch("/api", {
+          method: "PUT",
+          headers: {
+            "Content-Type": "application/json",
+          },
+        })
+
+        .then((data) => data.json())
+        .then((formresponse) => {
+          console.log(formresponse);
+          btn.setAttribute("disabled", true);
+          const label = document.createElement("label");
+          label.append("Responses");
+          target.append(label);
+
+          const ol = document.createElement("ol");
+          formresponse.forEach((response) => {
+            const li = document.createElement("li");
+            li.innerText = `${response.name}; ${response.zipcode}; ${response.interests}`;
+            ol.append(li);
+          });
+          target.append(ol);
+        });
+      }
+
       const formBtn = document.querySelector("#formBtn");
       formBtn.addEventListener("click", sendForm);
+
+      // GET form
+      const subBtn = document.querySelector("#subBtn");
+      subBtn.addEventListener("click", getForm);
     </script>
   </body>
 </html>
