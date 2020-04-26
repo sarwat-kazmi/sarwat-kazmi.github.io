@@ -2,7 +2,9 @@ import sqlite3 from 'sqlite3';
 import { open } from 'sqlite';
 
 async function writeUser(username, dbSettings) {
-    console.log(`touched username ${username}`);
+    console.log(`touched username '${username}'`);
+    console.log(`touched zipcode '${zipcode}'`);
+    console.log(`touched interests '${interests}'`);
     const db = await open(dbSettings)
     await db.exec('CREATE TABLE IF NOT EXISTS user (name)');
     await db.exec(`INSERT INTO user VALUES ("${username}")`);
