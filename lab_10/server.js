@@ -22,6 +22,15 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static("public"));
 
+function result(req, res) {
+  (async () => {
+    const database = await open(dbSettings);
+    const query = await database.all("SELECT * FROM user");
+    console.log("query result", query);
+    res.json(query);
+  })
+}
+
 function processDataForFrontEnd(req, res) {
   const baseURL = ""; // Enter the URL for the data you would like to retrieve here
 
