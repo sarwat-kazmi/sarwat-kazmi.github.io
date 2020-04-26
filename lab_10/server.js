@@ -31,6 +31,23 @@ function result(req, res) {
   })
 }
 
+function putRes(req, res) {
+  console.log("/api PUT request", req.body);
+  if (!req.body.name || !req.body.zipcode || !req.body.interests) {
+    console.log(req.body);
+    res.status("400").json("Don't leave fields blank");
+  } else {
+    writeUser(req.body.name, req.body.zipcode, req.body.interests, dbSettings)
+    .then((result) => {
+      console.log("The result", result);
+      res.json("Request received");
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+  }
+}
+
 function processDataForFrontEnd(req, res) {
   const baseURL = ""; // Enter the URL for the data you would like to retrieve here
 
