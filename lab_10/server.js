@@ -70,7 +70,9 @@ app
       });
     }
   });
-
+  .put((req, res) => {
+    console.log("/api route accessed")
+  });
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}!`);
 });
