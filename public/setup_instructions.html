@@ -1,0 +1,72 @@
+<html>
+    <head><title>lab setup instructions</title>
+        <link rel="stylesheet" href="base_style.css">
+    </head>
+    <body>
+        <h1>Welcome to INST377!</h1><br /><br />This article is to help you get set up with a development environment that will let you test your own labs to see whether you're doing it right, before you submit your work. It's a separate article from the main lab assignments because some of you will have gotten into the course late, and will need a reference for setting up.</p>
+        <p>INST377 is a technical course about human problems. This means that,&nbsp;more than anything else, INST377 is about learning to be comfortable with new, potentially frustrating technical experiences. In this course, you will be given professional tools, which should help a lot with basic problems in learning to code. Those tools have some expectations with them, though, notably that you're <strong>willing to read a lot</strong>, install things, and be very comfortable with things simply not working the first time.</p>
+        <p><strong>Most of programming is debugging and very carefully following instructions.</strong><strong><br /></strong></p>
+        <p>The following steps will be a little tricky, and need to be done in order, or you will not be able to submit your labs for this class. If you do not submit your labs, you can't get credit for them - but more importantly, you won't be able to practice your debugging before your group project.</p>
+        <p>Let's do this together.</p>
+        <ul>
+        <li><strong>Your node installation must be above version 13.2.0.&nbsp;</strong></li>
+        <li>This means installing the&nbsp;<strong>Current</strong> and not LTS version of Node from <a href="https://nodejs.org/en/download/current/">https://nodejs.org/en/download/current/</a></li>
+        <li>&nbsp;To check your version of Node.js, open a Terminal in VSCode, and type the command<span>&nbsp;</span><span>node --version<br /></span>Press Enter.</li>
+        <li>It should report a number higher than 13.2 - like so:<br /><br /><img style="font-size: 1rem;" src="https://umd.instructure.com/courses/1288484/files/57508316/download?wrap=1" alt="node_terminal" data-api-endpoint="https://umd.instructure.com/api/v1/courses/1288484/files/57508316" data-api-returntype="File" /></li>
+        </ul>
+        <p><strong>Part 1 - Getting Set Up</strong></p>
+        <ul>
+        <li>Sign up for <a href="http://github.com/">Github.com</a> if you have not yet done so.
+        <ul>
+        <li>Use a professional name that you would be happy to submit for a job interview</li>
+        </ul>
+        </li>
+        <li>Find and install <a href="https://desktop.github.com/">Github Desktop</a> if you have not yet done so.</li>
+        <li>Open&nbsp;<a class="external" href="https://pages.github.com/" target="_blank" rel="noopener">https://pages.github.com<span class="screenreader-only">&nbsp;(Links to an external site.)</span></a>&nbsp;in a new tab.</li>
+        <li><strong>Follow the instructions exactly</strong> on Github Pages to create a Pages-connected repository on your Github account
+        <ul>
+        <li>If you're sure you did it right and you still get a 404 Not Found, try adding /index.html to your URL, like this: <span style="background-color: #ccffcc;">https://<em>username</em>.github.io/index.html</span></li>
+        <li>Github&nbsp;<strong>often</strong> takes time to update or change.</li>
+        </ul>
+        </li>
+        <li>Clone or open your new Pages repository in Github Desktop.</li>
+        <li>Clone a copy of the <span style="background-color: #ccffcc;">course repository</span> to your Github Desktop.
+        <ul>
+        <li><a title="Cloning the Class Repository" href="https://umd.instructure.com/courses/1288484/pages/cloning-the-class-repository" data-api-endpoint="https://umd.instructure.com/api/v1/courses/1288484/pages/cloning-the-class-repository" data-api-returntype="Page">Cloning the Class Repository</a>&nbsp;</li>
+        <li>The course repo contains testing tools to help you get better at code, faster.</li>
+        </ul>
+        </li>
+        </ul>
+        <p><strong>Part 2 - Installing Your Lab Space</strong></p>
+        <ul>
+        <li><strong>This requires some comfort navigating directories in your computer.</strong></li>
+        <li>Open two Explorer or Finder windows</li>
+        <li>Copy the contents of the course repository (Ideally to be found at Documents/Github/INST377-FA2020) into your Github Pages folder/lab repository (Ideally to be found at Documents/Github/yourUsername.github.io)</li>
+        <li>You will need to edit the&nbsp;<strong>name</strong> of the following files:
+        <ul>
+        <li>gitignore -&gt; .gitignore</li>
+        <li>env -&gt; .env</li>
+        <li>eslint.cjs -&gt; .eslint.cjs</li>
+        <li>this is because "dot files" are ignored by your file system.</li>
+        </ul>
+        </li>
+        <li>Open your<span>&nbsp;</span><strong>lab repository</strong><span>&nbsp;</span>in VSCode using Github Desktop
+        <ul>
+        <li>You should see something like this image in your VSCode client<br /><br /><img src="https://umd.instructure.com/courses/1288484/files/57669908/preview" alt="basic_lab_folder.png" width="240" height="272" data-api-endpoint="https://umd.instructure.com/api/v1/courses/1288484/files/57669908" data-api-returntype="File" /></li>
+        </ul>
+        </li>
+        <li><strong>Important</strong>:
+        <ul>
+        <li>Edit your <span style="background-color: #ccffcc;">.env</span> file to contain your name and email</li>
+        <li>ie: NAME="your name" becomes NAME="Alex Leitch"</li>
+        </ul>
+        </li>
+        <li>Open a terminal window in your VSCode editor by clicking "Terminal &gt; New Terminal" in your menus.</li>
+        <li>Type<span>&nbsp;</span><span style="background-color: #ccffcc;">npm install</span>. The results should look sort of like this:<br /><br /><span><img src="https://umd.instructure.com/courses/1288484/files/57529210/download?wrap=1" alt="npm_install_results" data-api-endpoint="https://umd.instructure.com/api/v1/courses/1288484/files/57529210" data-api-returntype="File" /></span></li>
+        <li>Everything you need to test your work should now exist on your computer.</li>
+        <li>If you have trouble with <strong>any</strong> stage of this, please ask for help in the class Discord! Your peers probably ran into the same issue, there are a lot of you.</li>
+        <li>Remember to screencap your problem when you're asking for help. Clear explanations get you better answers.</li>
+        </ul>
+        <p><strong>NEXT UP: <a href="https://umd.instructure.com/courses/1288484/pages/working-with-cypress-to-test-your-labs" data-api-endpoint="https://umd.instructure.com/api/v1/courses/1288484/pages/working-with-cypress-to-test-your-labs" data-api-returntype="Page">Working With Cypress To Test Your Labs</a></strong></p>
+    </body>
+</html>
